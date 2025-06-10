@@ -269,6 +269,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
-#  Histogram with data cut off:
-# plt.hist(np.clip(df['Trip Duration'], 0, 3600),bins=100,color='cyan')
