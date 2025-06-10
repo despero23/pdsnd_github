@@ -78,17 +78,17 @@ def load_data(city, month, day):
     if month != 'all':
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month)
+        month = months.index(month) + 1  # Fix the month index
     
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
-        df = df[df['month_name'] == months[month]]
+    
     # filter by day of week if applicable
     if day != 'all':
         # filter by day of week to create the new dataframe
         days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
         day = days.index(day)
-        df = df = df[df['day_of_week'] == day]
+        df = df[df['day_of_week'] == day]
     
     return df
 
